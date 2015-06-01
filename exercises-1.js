@@ -110,19 +110,81 @@ function longest(){
 
 // .sort()
 
+var stringArray = ['Blue', 'Humpback', 'Beluga'];
+stringArray.sort();
+
+console.assert["Beluga", "Blue", "Humpback"];
+
 // .concat()
+
+var alpha = ['a', 'b', 'c'],
+    numeric = [1, 2, 3];
+
+var alphaNumeric = alpha.concat(numeric);
+
+console.assert['a', 'b', 'c', 1, 2, 3];
 
 // .indexOf()
 
+var array = [3, 6, 5];
+
+array.indexOf(6);
+
+console.assert[1];
+
 // .split()
+
+var myString = 'My fake plants died because I did not pretend to water them.';
+var splits = myString.split(' ', 4);
+
+// console.log(splits);
+console.assert["My", "fake", "plants", "died"];
 
 // .join()
 
+var a = ['Felt', 'Like', 'Running'];
+var myVar1 = a.join();      // assigns 'Felt,Like,Running' to myVar1
+// var myVar2 = a.join(', ');  // assigns 'Felt, Like, Running' to myVar2
+// var myVar3 = a.join(' + '); // assigns 'Felt + Like + Running' to myVar3
+// var myVar4 = a.join('');    // assigns 'FeltLikeRunning' to myVar4
+
+// console.log(myVar1);
+// console.log(myVar2);
+// console.log(myVar3);
+// console.log(myVar4);
+
+console.assert['Felt, Like, Running'];
+
 // .pop()
+
+var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+
+console.log(myFish); // ['angel', 'clown', 'mandarin', 'sturgeon']
+
+var popped = myFish.pop();
+
+console.log(myFish); // ['angel', 'clown', 'mandarin' ]
+
+console.log(popped); // 'sturgeon'
+
 
 // .push()
 
+var sports = ['soccer', 'baseball'];
+var total = sports.push('football', 'swimming');
+
+console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+
+
+console.assert["soccer", "baseball","football", "swimming"];
+
+
 // .slice()
+
+var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+var citrus = fruits.slice(1, 3);
+
+console.assert["Banana", "Lemon"];
 
 // .splice()
 
