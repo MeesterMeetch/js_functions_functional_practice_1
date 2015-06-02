@@ -85,7 +85,6 @@ console.assert( largest(2, 4, 6, 8) === 8 )
 function longest(){
     // parse arguments into an array
     var args = [].slice.call(arguments);
-
     // .. do something with each element of args
     // YOUR CODE HERE
     var longWord = "";
@@ -96,8 +95,8 @@ function longest(){
     })
     return longWord;
 }
-
  console.assert( longest("this", "is", "a", "awesome", "function") === "function" );
+
 
 /**
  * PART II
@@ -112,59 +111,53 @@ function longest(){
 
 var stringArray = ['Blue', 'Humpback', 'Beluga'];
 stringArray.sort();
-
 console.assert["Beluga", "Blue", "Humpback"];
+
 
 // .concat()
 
 var alpha = ['a', 'b', 'c'],
     numeric = [1, 2, 3];
-
 var alphaNumeric = alpha.concat(numeric);
-
 console.assert['a', 'b', 'c', 1, 2, 3];
+
 
 // .indexOf()
 
 var array = [3, 6, 5];
-
 array.indexOf(6);
-
 console.assert[1];
+
 
 // .split()
 
 var myString = 'My fake plants died because I did not pretend to water them.';
 var splits = myString.split(' ', 4);
-
-// console.log(splits);
+    // console.log(splits);
 console.assert["My", "fake", "plants", "died"];
+
 
 // .join()
 
 var a = ['Felt', 'Like', 'Running'];
 var myVar1 = a.join();      // assigns 'Felt,Like,Running' to myVar1
-// var myVar2 = a.join(', ');  // assigns 'Felt, Like, Running' to myVar2
-// var myVar3 = a.join(' + '); // assigns 'Felt + Like + Running' to myVar3
-// var myVar4 = a.join('');    // assigns 'FeltLikeRunning' to myVar4
+    // var myVar2 = a.join(', ');  // assigns 'Felt, Like, Running' to myVar2
+    // var myVar3 = a.join(' + '); // assigns 'Felt + Like + Running' to myVar3
+    // var myVar4 = a.join('');    // assigns 'FeltLikeRunning' to myVar4
 
-// console.log(myVar1);
-// console.log(myVar2);
-// console.log(myVar3);
-// console.log(myVar4);
-
+    // console.log(myVar1);
+    // console.log(myVar2);
+    // console.log(myVar3);
+    // console.log(myVar4);
 console.assert['Felt, Like, Running'];
+
 
 // .pop()
 
 var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
-
 console.log(myFish); // ['angel', 'clown', 'mandarin', 'sturgeon']
-
 var popped = myFish.pop();
-
 console.log(myFish); // ['angel', 'clown', 'mandarin' ]
-
 console.log(popped); // 'sturgeon'
 
 
@@ -172,26 +165,57 @@ console.log(popped); // 'sturgeon'
 
 var sports = ['soccer', 'baseball'];
 var total = sports.push('football', 'swimming');
-
 console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
-
-
 console.assert["soccer", "baseball","football", "swimming"];
+
 
 
 // .slice()
 
 var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 var citrus = fruits.slice(1, 3);
-
 console.assert["Banana", "Lemon"];
+
 
 // .splice()
 
+var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+    // removes 1 element from index 3
+removed = myFish.splice(3, 1);
+console.assert["angel", "clown", "mandarin"];
+
+
 // .shift()
 
+var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+    // console.log('myFish before: ' + myFish);
+var shifted = myFish.shift();
+    // console.log('myFish after: ' + myFish);
+    // console.log('Removed this element: ' + shifted);
+console.assert['angel'];
+
 // .unshift()
+var arr = [1, 2];
+arr.unshift(-2, -1); // = 4
+    // arr is [-2, -1, 1, 2]
+console.assert[4];
 
 // .filter()
 
+function isBigEnough(element) {
+  return element >= 10;
+}
+var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+    // filtered is [12, 130, 44]
+console.assert[12, 130, 44];
+
+
 // .map()
+
+var numbers = [1, 4, 9];
+var doubles = numbers.map(function(num) {
+  return num * 2;
+});
+// doubles is now [2, 8, 18]. numbers is still [1, 4, 9]
+console.log(numbers);
+console.log(doubles);
